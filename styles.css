@@ -1,0 +1,282 @@
+/* Estilos generales (como los que ya tienes) */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffffe;
+}
+
+header {
+    background-color: #7ee861;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.animal-gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.animal-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.animal-card img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.animal-card:hover img {
+    transform: scale(1.1);
+}
+
+.animal-card:hover {
+    transform: translateY(-10px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .animal-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animal-card {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 15px 0;
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 15px 0;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+
+    #modal-video {
+        height: auto;
+    }
+}
+
+/* Estilos para dispositivos muy pequeños (teléfonos en modo vertical) */
+@media (max-width: 480px) {
+    .animal-card {
+        width: 100%;
+    }
+
+    header {
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+
+    .modal-content {
+        margin: 40% auto;
+        padding: 15px;
+    }
+
+    .close {
+        font-size: 20px;
+    }
+}
+
+/* Estilos básicos del menú de navegación */
+.navbar {
+    background-color: #7ee861;
+    overflow: hidden;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu li a {
+    display: block;
+    color: #6d6c28f6;(16, 12, 12, 0.881);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar-menu li a:hover {
+    background-color: #60df6ae7;
+}
+
+/* Botón para dispositivos móviles */
+.navbar-toggle {
+    display: none;
+    background-color: #33333390;
+    color: rgb(230, 236, 229);
+    border: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Responsivo: ocultar el menú en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+/* Mostrar el menú cuando se haga clic en el botón */
+.navbar.active .navbar-menu {
+    display: flex;
+}
+/* Animación de color para el título */
+@keyframes colorChange {
+    0% { color: #ff6347; } /* Tomate */
+    25% { color: #1d4a7e; } /* Salmon Claro */
+    50% { color: #f4de1a; } /* Caqui Claro */
+    75% { color: #98fb98; } /* Verde Pálido */
+    100% { color: #87ceeb; } /* Azul Cielo */
+}
+
+/* Animación de salto para el título */
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animación de movimiento lateral */
+@keyframes moveSideways {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+/* Estilo para el título animado */
+.animated-title {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    animation: colorChange 4s infinite, jump 2s infinite, moveSideways 5s infinite;
+    display: inline-block;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .animated-title {
+        font-size: 2em;
+    }
+}
