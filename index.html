@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Animales y Aves</title>
+    <link rel="icon" href="Img/loro.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated-title">El Maravilloso Mundo de Animales</h1>
+        <nav class="navbar">
+            <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="navbar-menu">
+                <li><a href="#cat">Gato</a></li>
+                <li><a href="#dog">Perro</a></li>
+                <li><a href="#bird">Ave</a></li>
+                <li><a href="#penguin">Pingüino</a></li>
+                <li><a href="#elephant">Elefante</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="animal-gallery">
+        <div class="animal-card" id="cat">
+            <img src="Img/Gato.jpg" alt="Gato">
+            <h2>Gato</h2>
+        </div>
+        <div class="animal-card" id="dog">
+            <img src="Img/perro.jpg" alt="Perro">
+            <h2>Perro</h2>
+        </div>
+        <div class="animal-card" id="bird">
+            <img src="Img/pajaro.jpg" alt="Pájaro">
+            <h2>Pájaro</h2>
+        </div>
+        <!-- Nuevos Animales -->
+        <div class="animal-card" id="penguin">
+            <img src="Img/Pinguinos.jpg" alt="Pingüino">
+            <h2>Pingüino</h2>
+        </div>
+        <div class="animal-card" id="elephant">
+            <img src="Img/elefante.jpg" alt="Elefante">
+            <h2>Elefante</h2>
+        </div>
+    </section>
+    
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">Título del Animal</h2>
+            <video id="modal-video" controls>
+                <source id="modal-video-source" src="" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <p id="modal-description">Descripción del animal.</p>
+            <button id="play-sound">Escucha su Sonido</button>
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Creado por AndrésRo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
