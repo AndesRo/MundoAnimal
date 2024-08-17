@@ -10,17 +10,25 @@
 </head>
 <body>
     <header>
-        <h1 class="animated-title">Explorando el Asombroso y Maravilloso Mundo Animal</h1>
+        <h1 class="animated-title">Explorando el Maravilloso Mundo Animal</h1>
         <nav class="navbar">
-            <button class="navbar-toggle" aria-label="Toggle navigation">☰</button>
-            <ul class="navbar-menu">
-                <li><a href="#cat">🧵   😸CAT</a></li>
-                <li><a href="#dog">🦴   🐶DOG</a></li>
-                <li><a href="#bird">🐛   🐦BIRD</a></li>
-                <li><a href="#penguin">🧊   🐧PENGUIN</a></li>
-                <li><a href="#elephant">🌿   🐘ELEPHANT</a></li>
+            <div class="navbar-header">
+                <button class="navbar-toggle" id="navbar-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="#cat"><i class="fas fa-cat"></i><strong>Cat</strong></a></li>
+                <li><a href="#dog"><i class="fas fa-dog"></i> Dog</a></li>
+                <li><a href="#bird"><i class="fas fa-dove"></i> Bird</a></li>
+                <li><a href="#penguin"><i class="fas fa-paw"></i> Penguin</a></li>
+                <li><a href="#elephant"><i class="fas fa-hippo"></i> Elephant</a></li>
             </ul>
         </nav>
+        
+        
     </header>
     
 
@@ -39,7 +47,7 @@
         </div>
         <!-- Nuevos Animales -->
         <div class="animal-card" id="penguin">
-            <img src="Img/pinguinos.jpg" alt="Pingüino">
+            <img src="Img/Pinguinos.jpg" alt="Pingüino">
             <h2>Pingüino</h2>
         </div>
         <div class="animal-card" id="elephant">
@@ -58,13 +66,25 @@
                 Tu navegador no soporta el elemento de video.
             </video>
             <p id="modal-description">Descripción del animal.</p>
-            <button id="play-sound">Escucha su Sonido 🔊</button>
+            <button id="play-sound" class="modern-button">
+                <span class="play-icon">🔊</span> Escucha su Sonido
+            </button>
             
         </div>
     </div>
 
+    <script>
+        const toggleButton = document.getElementById('navbar-toggle');
+        const navbarMenu = document.getElementById('navbar-menu');
+    
+        toggleButton.addEventListener('click', () => {
+            navbarMenu.classList.toggle('show');
+        });
+    </script>
+    
+
     <footer>
-        <p>&copy; 2024 Creado por AndrésRo. Todos los derechos reservados🇨🇱</p>
+        <p>&copy; 2024 Creado por AndrésRo. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
